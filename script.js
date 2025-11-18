@@ -334,21 +334,3 @@
   // end of top carousel
 
   // Prevent horizontal overflow
-function preventHorizontalOverflow() {
-  document.body.style.overflowX = 'hidden';
-  document.documentElement.style.overflowX = 'hidden';
-  
-  // Ensure all containers respect viewport
-  const wideElements = document.querySelectorAll('div, section, article');
-  wideElements.forEach(el => {
-    if (el.scrollWidth > window.innerWidth) {
-      el.style.maxWidth = '100vw';
-      el.style.overflowX = 'hidden';
-    }
-  });
-}
-
-// Run on load and resize
-window.addEventListener('load', preventHorizontalOverflow);
-window.addEventListener('resize', preventHorizontalOverflow);
-
