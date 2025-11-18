@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* @import url(https://db.onlinewebfonts.com/c/3ab72b0d97a770d4a59077ac691252e9?family=Asgard+Trial+Regular); */
+
+
+/* @font-face {
+  font-family: 'AsgardTrial';
+  src: url('./assets/fonts/AsgardTrial-Regular.woff2') format('woff2'),
+       url('./assets/fonts/AsgardTrial-Regular.woff') format('woff'),
+       url('./assets/fonts/AsgardTrial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'AsgardTrial';
+  src: url('./font/asgard_2/');
+  font-weight: bold;
+  font-style:normal;
+}
+
+@font-face {
+    font-family: "Asgard Trial Regular";
+    src: url("https://db.onlinewebfonts.com/t/3ab72b0d97a770d4a59077ac691252e9.eot");
+    src: url("https://db.onlinewebfonts.com/t/3ab72b0d97a770d4a59077ac691252e9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3ab72b0d97a770d4a59077ac691252e9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3ab72b0d97a770d4a59077ac691252e9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3ab72b0d97a770d4a59077ac691252e9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3ab72b0d97a770d4a59077ac691252e9.svg#Asgard Trial Regular")format("svg");
+}
+
+@font-face {
+    font-family: 'LomoCopy LT Std Mezzo';
+    src: url('./font/LomoCopy LT Std Mezzo/LomoCopy LT Std Mezzo.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Asgard Trial Bold';
+  src: url('./font/asgard_2/AsgardTrial-Bold.ttf');
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+html, body {
+  font-family: "DM Sans", sans-serif !important;
+}
+
+
+.arrow-move {
+    width: 40px; /* adjust size if needed */
+    animation: moveLeftRight 0.7s ease-in-out infinite;
+}
+
+.bg-launch-gradient {
+    background: radial-gradient(
+        circle at center,
+        #0f6e70 0%,     
+        #064b4c 40%,     /* mid teal */
+        #063c3d 80%,     /* darker teal */
+        #042f30 100%     /* very dark edges */
+    );
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+
+@keyframes moveLeftRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }   /* how far left */
+    100% { transform: translateX(0); }
+}
+
+.carousel {
+  overflow-x: scroll;      /* enables horizontal scroll */
+  scrollbar-width: none;   /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;           /* Chrome, Safari, Opera */
+}
+
+
+
+.carousel { 
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* IE/Edge legacy */
+    outline: none;                   /* no focus outline line */
+    border: 0; 
+  }
+  .carousel::-webkit-scrollbar { display: none; }
+
+
+  .gradient-text {
+  background: linear-gradient(90deg, #1d913f, #2dd4bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
