@@ -334,3 +334,49 @@
   // end of top carousel
 
   // Prevent horizontal overflow
+ function fixHeaderOverflow() {
+   
+    const headerSection = document.querySelector('.relative.bg-\[\#09130c\]');
+    
+    if (headerSection) {
+     
+        headerSection.style.overflowX = 'hidden';
+        headerSection.style.maxWidth = '100vw';
+        headerSection.style.width = '100%';
+        
+        if (window.innerWidth <= '768px') {
+            const headerImages = headerSection.querySelectorAll('img.absolute');
+            headerImages.forEach(img => {
+                img.style.maxWidth = '60px';
+                img.style.width = '60px';
+                
+                
+                if (img.classList.contains('right-3')) {
+                    img.style.right = '5px';
+                }
+                if (img.classList.contains('left-3')) {
+                    img.style.left = '5px';
+                }
+                if (img.classList.contains('left-0')) {
+                    img.style.left = '-10px';
+                }
+                if (img.classList.contains('right-0')) {
+                    img.style.right = '-10px';
+                }
+            });
+            
+            
+            const header = document.querySelector('header');
+            if (header) {
+                header.style.width = '96%';
+                header.style.left = '2%';
+                header.style.transform = 'none';
+            }
+        }
+    }
+}
+
+
+fixHeaderOverflow();
+window.addEventListener('load', fixHeaderOverflow);
+window.addEventListener('resize', fixHeaderOverflow);
