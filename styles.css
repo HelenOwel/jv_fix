@@ -67,6 +67,26 @@ html, body {
     max-width: 100vw !important;
 }
 
+.grab-hover {
+  transition: all 0.35s ease !important;
+  border: 1px solid transparent;
+}
+
+/* REAL hover effect matching your attached JVZoo button */
+.grab-hover:hover {
+  background: linear-gradient(135deg, #0d2a17 0%, #0f3a20 40%, #1b5f34 100%) !important;
+  border-color: #d0ff76 !important;
+  box-shadow:
+    0 0 22px rgba(208, 255, 118, 0.55),
+    0 0 12px rgba(0, 255, 120, 0.45);
+}
+
+/* Change ONLY the text color on hover */
+.grab-hover:hover span {
+  color: #e3f7dd !important; /* light mint color from screenshot */
+}
+
+
 
 @media (max-width: 768px) {
     .relative.bg-\[\#09130c\] img.absolute {
